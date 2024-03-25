@@ -1,1 +1,1 @@
-# KingdomKards-CLI
+# Kingdom Kards Ruleset

@@ -1,5 +1,6 @@
 package kingdomkards;
 
+
 public class Card {
 
     public enum Values {
@@ -15,7 +16,7 @@ public class Card {
         TEN,
         JACK,
         QUEEN,
-        KING
+        KING,
     };
 
 
@@ -89,14 +90,21 @@ public class Card {
     public String toString() {
         /* {color} {value} of {suit} */
         return colorToString(this.color) + " " + valueToString(this.value)
-            + " of " + suitToString(this.suit);
+                + " of " + suitToString(this.suit);
     }
-
+    
 
     public void setType(Values value, Suits suit) {
         this.value = value;
         this.suit = suit;
-        this.color = ( (this.suit == Suits.CLUBS) || (this.suit == Suits.SPADES) ) ?
-                        Colors.BLACK : Colors.RED ; 
+        this.color = ((this.suit == Suits.CLUBS) || (this.suit == Suits.SPADES)) ? Colors.BLACK : Colors.RED;
     }
+    
+
+    public void copy(Card card) {
+        this.value = card.value;
+        this.suit = card.suit;
+        this.color = card.color;
+    }
+
 }

@@ -1,14 +1,11 @@
-import kingdomkards.Card;
-import kingdomkards.Card.Values;
-import kingdomkards.Card.Suits;
-import kingdomkards.Card.Colors;
+import kingdomkards.Player;
 
 
 public class Main {
 
     public static void main(String[] args) {
-        Card kos = new Card(Values.KING, Suits.SPADES);
-        System.out.println(kos);
+        Player playerOne = new Player();
+        playerOne.printDeck();
     }
     
 }
